@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  salesforce:
+    image: salesforce/cli:latest-rc-slim
+    working_dir: /home
+    ports:
+      - 1717:1717
+    volumes:
+      - ./src:/home
+    stdin_open: true
+    tty: true
